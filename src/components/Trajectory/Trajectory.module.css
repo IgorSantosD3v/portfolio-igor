@@ -1,0 +1,117 @@
+.section {
+  padding: var(--space-24) 0;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 400;
+  margin-bottom: var(--space-3);
+}
+
+.subheading {
+  color: var(--color-text-dim);
+  max-width: 46ch;
+  margin-bottom: var(--space-16);
+}
+
+.timeline {
+  position: relative;
+  max-width: 720px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 68px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--color-border-strong), var(--color-border) 90%, transparent);
+}
+
+.item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px 24px 1fr;
+  align-items: start;
+  padding-bottom: var(--space-10, 2.5rem);
+}
+
+.item:last-child {
+  padding-bottom: 0;
+}
+
+.year {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-text-faint);
+  padding-top: 2px;
+}
+
+.itemCurrent .year {
+  color: var(--accent);
+}
+
+.marker {
+  position: relative;
+  justify-self: center;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-strong);
+  margin-top: 6px;
+  z-index: 1;
+}
+
+.itemCurrent .marker {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.content h3 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.02rem;
+  margin-bottom: var(--space-2);
+  display: inline-block;
+}
+
+.content p {
+  color: var(--color-text-dim);
+  font-size: 0.94rem;
+  max-width: 48ch;
+}
+
+.badge {
+  display: inline-block;
+  margin-left: var(--space-3);
+  vertical-align: middle;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+  background: var(--accent-soft);
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+}
+
+@media (max-width: 560px) {
+  .item {
+    grid-template-columns: 40px 20px 1fr;
+  }
+
+  .timeline::before {
+    left: 50px;
+  }
+
+  .year {
+    font-size: 0.72rem;
+  }
+}

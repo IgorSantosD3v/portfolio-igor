@@ -1,0 +1,75 @@
+.section {
+  padding: var(--space-32) 0;
+  border-top: 1px solid var(--color-border);
+  background:
+    radial-gradient(ellipse 700px 400px at 20% 20%, var(--accent-soft), transparent 60%),
+    var(--color-bg-elevated);
+}
+
+.inner {
+  max-width: 680px;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  margin-bottom: var(--space-5);
+}
+
+.lead {
+  color: var(--color-text-dim);
+  max-width: 54ch;
+  margin-bottom: var(--space-12);
+  font-size: 1.02rem;
+}
+
+.channels {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.channelPrimary {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--accent-strong);
+  border-bottom: 1px solid var(--accent-dim);
+  width: fit-content;
+  padding-bottom: var(--space-2);
+  transition: opacity 0.2s var(--ease-out);
+}
+
+.channelPrimary:hover {
+  opacity: 0.8;
+}
+
+.socialRow {
+  display: flex;
+  gap: var(--space-12);
+  flex-wrap: wrap;
+}
+
+.socialRow a {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.channelLabel {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-faint);
+}
+
+.channelValue {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  transition: color 0.2s var(--ease-out);
+}
+
+.socialRow a:hover .channelValue {
+  color: var(--accent);
+}
