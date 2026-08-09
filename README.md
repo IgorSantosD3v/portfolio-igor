@@ -3,7 +3,7 @@
 Portfólio pessoal desenvolvido em React, apresentando minha trajetória, projetos e
 habilidades como desenvolvedor back-end.
 
-**🔗 Acesse online:** _adicione aqui o link depois do deploy (veja a seção "Deploy" abaixo)_
+**🔗 Acesse online:** _https://portfolio-igor-santos.onrender.com_
 
 ![preview](./src/assets/igor-santos.jpg)
 
