@@ -8,7 +8,7 @@ function Contact() {
         <p className="scene-label">05 · Contato</p>
         <h2 className={styles.heading}>Vamos conversar</h2>
         <p className={styles.lead}>
-          Estou disponível para oportunidades remotas ou internacionais como
+          Estou disponível para oportunidades nacionais ou internacionais como
           desenvolvedor back-end. Se você tem uma vaga, um projeto ou quer trocar uma
           ideia sobre sistemas distribuídos, me chama.
         </p>

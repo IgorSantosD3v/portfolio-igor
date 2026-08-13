@@ -17,7 +17,7 @@ function Hero() {
           </h1>
 
           <p className={styles.lead}>
-            Sou Igor Santos, desenvolvedor <span className={styles.nowrap}>back-end</span> de 24 anos, com experiência em{' '}
+            Sou Igor Santos, desenvolvedor <span className={styles.nowrap}>back-end</span>, com experiência em{' '}
             <strong>Python, C# e ASP.NET</strong>. Construo APIs escaláveis, sistemas
             distribuídos e automações — do design de banco de dados ao Docker e ao
             Kubernetes — e hoje integro modelos de linguagem em produtos reais.
