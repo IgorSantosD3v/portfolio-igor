@@ -5,14 +5,14 @@ function Trajectory() {
   return (
     <section id="trajetoria" className={styles.section}>
       <div className="container">
-        <p className="scene-label">Cena 02 — Trajetória</p>
-        <h2 className={styles.heading}>Roteiro até aqui</h2>
+        <p className="scene-label">02 · Trajetória</p>
+        <h2 className={styles.heading}>Como cheguei até aqui</h2>
         <p className={styles.subheading}>
-          Cada stack adicionada veio de uma necessidade concreta, não de um checklist.
+          Cada tecnologia que aprendi veio de uma necessidade concreta, não de um checklist.
         </p>
 
         <ol className={styles.timeline}>
-          {trajectory.map((item, index) => (
+          {trajectory.map((item) => (
             <li
               key={`${item.year}-${item.title}`}
               className={`${styles.item} ${item.current ? styles.itemCurrent : ''}`}

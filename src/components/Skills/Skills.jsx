@@ -5,7 +5,7 @@ function Skills() {
   return (
     <section id="skills" className={styles.section}>
       <div className="container">
-        <p className="scene-label">Cena 04 — Habilidades</p>
+        <p className="scene-label">04 · Habilidades</p>
         <h2 className={styles.heading}>Onde estou operacional</h2>
         <p className={styles.subheading}>
           Tecnologias que uso no dia a dia e frentes em que estou evoluindo agora.

@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   background: var(--color-bg);
-  color: var(--color-text);
+  color: var(--color-ink);
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
@@ -49,14 +49,14 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--purple);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
 
 ::selection {
-  background: var(--accent-soft-strong);
-  color: var(--color-text);
+  background: var(--yellow-soft-strong);
+  color: var(--color-ink);
 }
 
 .container {
@@ -72,22 +72,24 @@ textarea:focus-visible {
   }
 }
 
-/* Rótulo de seção estilo "claquete de cena" — reaproveitado por todas as seções */
+/* Rótulo de seção — reaproveitado por todas as seções */
 .scene-label {
   display: inline-flex;
   align-items: center;
   gap: var(--space-3);
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  letter-spacing: 0.14em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--purple);
   margin-bottom: var(--space-4);
 }
 
 .scene-label::before {
   content: '';
   width: 22px;
-  height: 1px;
-  background: var(--accent);
+  height: 2px;
+  border-radius: 2px;
+  background: var(--yellow);
 }

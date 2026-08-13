@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { siteConfig } from '../../data/siteConfig'
 import styles from './Navbar.module.css'
 
 const LINKS = [
@@ -25,8 +26,11 @@ function Navbar() {
     <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         <a href="#top" className={styles.logo}>
-          <span className={styles.logoName}>Igor Santos</span>
-          <span className={styles.logoTag}>// back-end</span>
+          <span className={styles.logoMark}>IS</span>
+          <span className={styles.logoText}>
+            <span className={styles.logoName}>Igor Santos</span>
+            <span className={styles.logoTag}>Back-End Developer</span>
+          </span>
         </a>
 
         <nav className={`${styles.nav} ${open ? styles.navOpen : ''}`}>
@@ -39,6 +43,16 @@ function Navbar() {
               </li>
             ))}
           </ul>
+
+          <a
+            href={siteConfig.whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.navCta}
+            onClick={handleLinkClick}
+          >
+            Vamos conversar
+          </a>
         </nav>
 
         <button

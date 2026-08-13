@@ -6,10 +6,10 @@ function Projects() {
   return (
     <section id="projetos" className={styles.section}>
       <div className="container">
-        <p className="scene-label">Cena 03 — Projetos</p>
-        <h2 className={styles.heading}>Trabalhos em cartaz</h2>
+        <p className="scene-label">03 · Projetos</p>
+        <h2 className={styles.heading}>Projetos em destaque</h2>
         <p className={styles.subheading}>
-          Uma seleção de projetos que mostram como penso estrutura, dados e interface.
+          Uma seleção de projetos que mostra como penso estrutura, dados e interface.
         </p>
 
         <div className={styles.grid}>

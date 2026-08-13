@@ -1,3 +1,4 @@
+import { siteConfig } from '../../data/siteConfig'
 import styles from './Footer.module.css'
 
 function Footer() {
@@ -6,7 +7,7 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
-        <span>© {year} Igor Santos</span>
+        <span>© {year} {siteConfig.name}</span>
         <span className={styles.tag}>Construído com React</span>
       </div>
     </footer>

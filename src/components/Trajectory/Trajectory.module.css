@@ -6,13 +6,14 @@
 
 .heading {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
   font-weight: 400;
+  color: var(--color-ink);
   margin-bottom: var(--space-3);
 }
 
 .subheading {
-  color: var(--color-text-dim);
+  color: var(--color-ink-soft);
   max-width: 46ch;
   margin-bottom: var(--space-16);
 }
@@ -28,8 +29,9 @@
   left: 68px;
   top: 6px;
   bottom: 6px;
-  width: 1px;
-  background: linear-gradient(to bottom, var(--color-border-strong), var(--color-border) 90%, transparent);
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(to bottom, var(--yellow-soft-strong), var(--color-border) 92%, transparent);
 }
 
 .item {
@@ -37,7 +39,7 @@
   display: grid;
   grid-template-columns: 56px 24px 1fr;
   align-items: start;
-  padding-bottom: var(--space-10, 2.5rem);
+  padding-bottom: var(--space-10);
 }
 
 .item:last-child {
@@ -47,42 +49,44 @@
 .year {
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  color: var(--color-text-faint);
+  color: var(--color-ink-faint);
   padding-top: 2px;
 }
 
 .itemCurrent .year {
-  color: var(--accent);
+  color: var(--purple);
+  font-weight: 600;
 }
 
 .marker {
   position: relative;
   justify-self: center;
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: var(--color-bg-elevated);
-  border: 1px solid var(--color-border-strong);
-  margin-top: 6px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border-strong);
+  margin-top: 5px;
   z-index: 1;
 }
 
 .itemCurrent .marker {
-  background: var(--accent);
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-soft);
+  background: var(--yellow);
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 4px var(--yellow-soft);
 }
 
 .content h3 {
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 1.02rem;
+  color: var(--color-ink);
   margin-bottom: var(--space-2);
   display: inline-block;
 }
 
 .content p {
-  color: var(--color-text-dim);
+  color: var(--color-ink-soft);
   font-size: 0.94rem;
   max-width: 48ch;
 }
@@ -95,11 +99,11 @@
   font-size: 0.62rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--accent);
-  border: 1px solid var(--accent-dim);
-  background: var(--accent-soft);
-  padding: 0.15rem 0.5rem;
-  border-radius: 20px;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  background: var(--purple-soft);
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-pill);
 }
 
 @media (max-width: 560px) {

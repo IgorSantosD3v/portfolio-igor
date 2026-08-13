@@ -2,8 +2,8 @@
   padding: var(--space-32) 0;
   border-top: 1px solid var(--color-border);
   background:
-    radial-gradient(ellipse 700px 400px at 20% 20%, var(--accent-soft), transparent 60%),
-    var(--color-bg-elevated);
+    radial-gradient(ellipse 700px 420px at 18% 15%, var(--yellow-soft), transparent 60%),
+    var(--color-bg-soft);
 }
 
 .inner {
@@ -12,45 +12,88 @@
 
 .heading {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 2.9rem);
   font-weight: 400;
+  color: var(--color-ink);
   margin-bottom: var(--space-5);
 }
 
 .lead {
-  color: var(--color-text-dim);
+  color: var(--color-ink-soft);
   max-width: 54ch;
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--space-10);
   font-size: 1.02rem;
+}
+
+.whatsappCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background: var(--whatsapp);
+  color: #ffffff;
+  padding: var(--space-5) var(--space-6);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-10);
+  transition: transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+}
+
+.whatsappCard:hover {
+  background: var(--whatsapp-strong);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.whatsappIconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  flex-shrink: 0;
+}
+
+.whatsappIcon {
+  width: 26px;
+  height: 26px;
+}
+
+.whatsappText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-grow: 1;
+}
+
+.whatsappLabel {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.whatsappNumber {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.whatsappArrow {
+  font-size: 1.3rem;
+  transition: transform 0.2s var(--ease-out);
+}
+
+.whatsappCard:hover .whatsappArrow {
+  transform: translateX(4px);
 }
 
 .channels {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: var(--space-8);
 }
 
-.channelPrimary {
-  font-family: var(--font-display);
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  color: var(--accent-strong);
-  border-bottom: 1px solid var(--accent-dim);
-  width: fit-content;
-  padding-bottom: var(--space-2);
-  transition: opacity 0.2s var(--ease-out);
-}
-
-.channelPrimary:hover {
-  opacity: 0.8;
-}
-
-.socialRow {
-  display: flex;
-  gap: var(--space-12);
-  flex-wrap: wrap;
-}
-
-.socialRow a {
+.channel {
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
@@ -58,18 +101,29 @@
 
 .channelLabel {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-text-faint);
+  color: var(--color-ink-faint);
 }
 
 .channelValue {
   font-size: 0.95rem;
-  color: var(--color-text);
+  font-weight: 600;
+  color: var(--color-ink);
   transition: color 0.2s var(--ease-out);
 }
 
-.socialRow a:hover .channelValue {
-  color: var(--accent);
+.channel:hover .channelValue {
+  color: var(--purple);
+}
+
+@media (max-width: 560px) {
+  .whatsappCard {
+    align-items: flex-start;
+  }
+
+  .whatsappArrow {
+    display: none;
+  }
 }

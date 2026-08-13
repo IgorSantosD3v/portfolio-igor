@@ -1,27 +1,57 @@
-# Igor Santos — Portfolio
+<div align="center">
 
-Portfólio pessoal desenvolvido em React, apresentando minha trajetória, projetos e
-habilidades como desenvolvedor back-end.
+<img src="./src/assets/igor-santos.jpg" alt="Igor Santos" width="180" style="border-radius: 50%;" />
 
-**🔗 Acesse online:** _https://portfolio-igor-santos.onrender.com_
+# Igor Santos
+### Desenvolvedor Back-End · Python · C# · IA Generativa
 
-![preview](./src/assets/igor-santos.jpg)
+[![React](https://img.shields.io/badge/React-18-149ECA?style=flat-square&logo=react&logoColor=white)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-5-F0A202?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev)
+[![CSS Modules](https://img.shields.io/badge/CSS-Modules-6C4AB6?style=flat-square&logo=css3&logoColor=white)](https://github.com/css-modules/css-modules)
+[![License](https://img.shields.io/badge/license-MIT-201C14?style=flat-square)](#)
 
-## Sobre o conceito
+**[🔗 Ver site publicado](#)** &nbsp;·&nbsp; **[💬 Falar no WhatsApp](https://wa.me/5562991474857)** &nbsp;·&nbsp; **[💼 LinkedIn](https://www.linkedin.com/in/igor-santos-7b993b357)**
 
-O design parte de uma referência literal: a foto de perfil, com estúdio escuro e luz
-pontual quente. A identidade visual do site reaproveita essa paleta (preto profundo +
-brilho dourado de "luz de estúdio") e organiza as seções como "cenas" — um paralelo com
-o próprio cenário da foto — usando uma fonte serifada (Fraunces) para as chamadas
-principais e uma fonte monoespaçada (JetBrains Mono) para rótulos técnicos, em
-referência direta ao universo de back-end.
+</div>
+
+---
+
+## Sobre o projeto
+
+Portfólio pessoal desenvolvido em **React**, apresentando minha trajetória, projetos e
+habilidades como desenvolvedor back-end. O objetivo foi construir uma experiência
+rápida, acessível e com uma hierarquia visual clara — sem ruído, sem excesso — na
+mesma linha de produtos de tecnologia bem construídos.
+
+### Identidade visual
+
+A paleta nasce da própria foto de perfil: **amarelo** como cor de marca (energia,
+otimismo, atenção) e um **roxo sutil** como contraste secundário, usado com moderação
+em detalhes — bordas, badges, estados de foco — sem nunca competir com o amarelo ou
+com a leitura do conteúdo. Botões de ação usam alto contraste e formato de pílula,
+para que fiquem sempre óbvios e clicáveis.
+
+| Token | Uso |
+|---|---|
+| 🟡 `--yellow` | Cor de marca — botões primários, destaques |
+| 🟣 `--purple` | Contraste secundário — links, badges, foco |
+| 🟢 `--whatsapp` | Reservada exclusivamente para os botões de WhatsApp |
 
 ## Tecnologias utilizadas
 
 - [React 18](https://react.dev/)
 - [Vite](https://vitejs.dev/) como bundler e servidor de desenvolvimento
-- CSS Modules para estilização isolada por componente (sem bibliotecas externas de UI)
-- Google Fonts: Fraunces, Inter e JetBrains Mono
+- **CSS Modules** para estilização isolada por componente — sem bibliotecas externas de UI
+- Google Fonts: [Fraunces](https://fonts.google.com/specimen/Fraunces), [Inter](https://fonts.google.com/specimen/Inter) e [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono)
+
+## Funcionalidades
+
+- ✅ Seções: Sobre, Trajetória, Projetos, Habilidades e Contato
+- ✅ Botão de **WhatsApp** flutuante (sempre visível) + card de contato dedicado
+- ✅ Totalmente **responsivo** — mobile, tablet e desktop
+- ✅ Navegação por âncoras com menu mobile animado
+- ✅ Acessibilidade: foco de teclado visível, textos alternativos, `prefers-reduced-motion`
+- ✅ Imagem de perfil otimizada para performance de carregamento
 
 ## Estrutura do projeto
 
@@ -30,22 +60,24 @@ portfolio-igor/
 ├── public/
 │   └── favicon.svg
 ├── src/
-│   ├── assets/              # imagens (foto de perfil)
-│   ├── components/          # um componente por seção, cada um com seu .module.css
+│   ├── assets/                  # foto de perfil (otimizada para web)
+│   ├── components/              # um componente por seção, cada um com seu .module.css
 │   │   ├── Navbar/
-│   │   ├── Hero/             # seção "Sobre mim"
-│   │   ├── Trajectory/       # linha do tempo de evolução técnica
-│   │   ├── Projects/         # grid de projetos (+ ProjectCard.jsx reutilizável)
-│   │   ├── Skills/           # habilidades agrupadas por área
-│   │   ├── Contact/          # formas de contato
-│   │   └── Footer/
-│   ├── data/                 # conteúdo separado da UI — edite aqui
-│   │   ├── projects.js       # lista de projetos exibidos
-│   │   └── trajectory.js     # linha do tempo + grupos de habilidades
+│   │   ├── Hero/                 # seção "Sobre mim"
+│   │   ├── Trajectory/           # linha do tempo de evolução técnica
+│   │   ├── Projects/              # grid de projetos (+ ProjectCard.jsx reutilizável)
+│   │   ├── Skills/                # habilidades agrupadas por área
+│   │   ├── Contact/                # canais de contato
+│   │   ├── Footer/
+│   │   └── WhatsappButton/        # botão flutuante de contato
+│   ├── data/                     # conteúdo separado da UI — edite aqui
+│   │   ├── siteConfig.js         # nome, e-mail, redes sociais, WhatsApp
+│   │   ├── projects.js           # lista de projetos exibidos
+│   │   └── trajectory.js         # linha do tempo + grupos de habilidades
 │   ├── styles/
-│   │   └── tokens.css        # cores, tipografia e espaçamentos (design tokens)
+│   │   └── tokens.css            # cores, tipografia e espaçamentos (design tokens)
 │   ├── App.jsx
-│   ├── index.css             # reset + estilos globais
+│   ├── index.css                 # reset + estilos globais
 │   └── main.jsx
 ├── index.html
 ├── package.json
@@ -54,7 +86,7 @@ portfolio-igor/
 
 ## Como rodar o projeto localmente
 
-Pré-requisitos: [Node.js](https://nodejs.org/) 18 ou superior instalado.
+Pré-requisito: [Node.js](https://nodejs.org/) 18 ou superior instalado.
 
 ```bash
 # 1. instale as dependências
@@ -64,8 +96,8 @@ npm install
 npm run dev
 ```
 
-O terminal vai mostrar um endereço local (normalmente `http://localhost:5173`) — abra
-no navegador. As alterações nos arquivos são refletidas automaticamente.
+O terminal mostrará um endereço local (normalmente `http://localhost:5173`) — abra no
+navegador. As alterações nos arquivos são refletidas automaticamente.
 
 Para gerar a versão de produção (arquivos otimizados na pasta `dist/`):
 
@@ -76,51 +108,57 @@ npm run preview   # opcional: testa a build de produção localmente
 
 ## Como personalizar o conteúdo
 
-Você não precisa mexer nos componentes para atualizar o conteúdo:
+Não é necessário mexer nos componentes para atualizar o conteúdo:
 
-- **Projetos:** edite `src/data/projects.js` — adicione, remova ou altere descrição,
-  tecnologias e links de cada projeto.
-- **Trajetória e habilidades:** edite `src/data/trajectory.js`.
-- **E-mail de contato:** troque a constante `EMAIL` em
-  `src/components/Contact/Contact.jsx` (está com um valor de exemplo).
-- **Foto de perfil:** substitua `src/assets/igor-santos.jpg` por outra imagem com o
-  mesmo nome, ou atualize o `import` em `src/components/Hero/Hero.jsx`.
-- **Cores e tipografia:** ajuste as variáveis em `src/styles/tokens.css`.
+| O que mudar | Onde editar |
+|---|---|
+| E-mail, WhatsApp, GitHub, LinkedIn | `src/data/siteConfig.js` |
+| Projetos exibidos | `src/data/projects.js` |
+| Trajetória e habilidades | `src/data/trajectory.js` |
+| Foto de perfil | substitua `src/assets/igor-santos.jpg` (mesmo nome) |
+| Cores e tipografia | `src/styles/tokens.css` |
 
-## Deploy (gratuito)
+> ⚠️ Antes de publicar, troque o e-mail de exemplo em `src/data/siteConfig.js`
+> (constante `email`) pelo seu e-mail real.
 
-Qualquer uma das opções abaixo funciona bem com este projeto (feito com Vite).
+## Deploy
 
-### Vercel (recomendado, mais simples)
+O projeto é 100% estático (Vite) e pode ser publicado gratuitamente em qualquer uma
+das plataformas abaixo.
 
-1. Suba este projeto para um repositório no GitHub (veja seção abaixo).
-2. Crie uma conta em [vercel.com](https://vercel.com) e clique em **Add New → Project**.
-3. Selecione o repositório — a Vercel detecta o Vite automaticamente
-   (build command: `npm run build`, output: `dist`).
-4. Clique em **Deploy**. Em poucos segundos você recebe uma URL pública.
+### Render
+
+1. Suba o projeto para o GitHub (veja a seção seguinte).
+2. Em [render.com](https://render.com), clique em **New → Static Site** e conecte o repositório.
+3. **Build Command:** `npm run build` · **Publish Directory:** `dist`
+4. Clique em **Create Static Site** — o deploy acontece automaticamente a cada push na `main`.
+
+### Vercel
+
+1. Suba o projeto para o GitHub.
+2. Em [vercel.com](https://vercel.com), **Add New → Project** e selecione o repositório.
+3. A Vercel detecta o Vite automaticamente (build: `npm run build`, output: `dist`).
+4. Clique em **Deploy**.
 
 ### Netlify
 
 1. Suba o projeto para o GitHub.
 2. Em [netlify.com](https://netlify.com), **Add new site → Import an existing project**.
-3. Configure: **Build command:** `npm run build` · **Publish directory:** `dist`.
-4. Deploy.
+3. **Build command:** `npm run build` · **Publish directory:** `dist`.
 
 ### GitHub Pages
 
-1. No arquivo `vite.config.js`, ajuste `base` para o nome do seu repositório, por
-   exemplo: `base: '/portfolio-igor/'`.
+1. Em `vite.config.js`, ajuste `base` para o nome do repositório, ex.: `base: '/portfolio-igor/'`.
 2. Gere a build: `npm run build`.
-3. Publique o conteúdo da pasta `dist/` na branch `gh-pages` (você pode usar o pacote
-   [`gh-pages`](https://www.npmjs.com/package/gh-pages) ou o GitHub Actions).
-4. Ative o GitHub Pages em **Settings → Pages**, apontando para a branch `gh-pages`.
+3. Publique a pasta `dist/` na branch `gh-pages` (via [`gh-pages`](https://www.npmjs.com/package/gh-pages) ou GitHub Actions).
+4. Ative em **Settings → Pages**, apontando para a branch `gh-pages`.
 
 ## Publicando este projeto no GitHub
 
 ```bash
 git init
 git add .
-git commit -m "feat: portfolio inicial"
+git commit -m "feat: portfolio v2 — nova identidade visual"
 git branch -M main
 git remote add origin https://github.com/IgorSantosD3v/SEU-REPOSITORIO.git
 git push -u origin main
@@ -139,5 +177,18 @@ Todos os repositórios: [github.com/IgorSantosD3v](https://github.com/IgorSantos
 
 ## Contato
 
-- GitHub: [github.com/IgorSantosD3v](https://github.com/IgorSantosD3v)
-- LinkedIn: [linkedin.com/in/igor-santos-7b993b357](https://www.linkedin.com/in/igor-santos-7b993b357)
+<div align="left">
+
+| Canal | Link |
+|---|---|
+| 💬 WhatsApp | [+55 62 99147-4857](https://wa.me/5562991474857) |
+| 💼 LinkedIn | [linkedin.com/in/igor-santos-7b993b357](https://www.linkedin.com/in/igor-santos-7b993b357) |
+| 🐙 GitHub | [github.com/IgorSantosD3v](https://github.com/IgorSantosD3v) |
+
+</div>
+
+---
+
+<div align="center">
+<sub>Feito com React por Igor Santos © 2026</sub>
+</div>

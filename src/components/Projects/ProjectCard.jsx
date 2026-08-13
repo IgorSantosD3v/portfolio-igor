@@ -1,19 +1,31 @@
 import styles from './Projects.module.css'
 
 function ProjectCard({ project }) {
-  const { take, title, description, tags, repoUrl, demoUrl } = project
+  const { number, title, description, tags, repoUrl, demoUrl } = project
 
   return (
     <article className={styles.card}>
       <div className={styles.cardHeader}>
-        <span className={styles.take}>Take {take}</span>
+        <span className={styles.number}>{number}</span>
         <div className={styles.cardLinks}>
-          <a href={repoUrl} target="_blank" rel="noreferrer" aria-label={`Repositório de ${title} no GitHub`}>
-            Código
+          <a
+            href={repoUrl}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.cardLink}
+            aria-label={`Ver código de ${title} no GitHub`}
+          >
+            Código ↗
           </a>
           {demoUrl && (
-            <a href={demoUrl} target="_blank" rel="noreferrer" aria-label={`Demonstração de ${title}`}>
-              Demo
+            <a
+              href={demoUrl}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.cardLink}
+              aria-label={`Ver demonstração de ${title}`}
+            >
+              Demo ↗
             </a>
           )}
         </div>
