@@ -24,9 +24,8 @@ function Hero() {
           </p>
 
           <p className={styles.lead}>
-            Meu objetivo é atuar em times internacionais como desenvolvedor{' '}
-            <span className={styles.nowrap}>back-end</span>,
-            de forma remota, na Europa ou nos Estados Unidos.
+            Meu objetivo é atuar em times nacionais ou internacionais como desenvolvedor{' '}
+            <span className={styles.nowrap}>back-end</span>.
           </p>
 
           <div className={styles.actions}>
