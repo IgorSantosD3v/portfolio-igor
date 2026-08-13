@@ -17,15 +17,14 @@ function Hero() {
           </h1>
 
           <p className={styles.lead}>
-            Sou Igor Santos, desenvolvedor back-end de 24 anos, com experiência em{' '}
+            Sou Igor Santos, desenvolvedor back-end, com experiência em{' '}
             <strong>Python, C# e ASP.NET</strong>. Construo APIs escaláveis, sistemas
             distribuídos e automações — do design de banco de dados ao Docker e ao
             Kubernetes — e hoje integro modelos de linguagem em produtos reais.
           </p>
 
           <p className={styles.lead}>
-            Meu objetivo é atuar em times internacionais como desenvolvedor back-end,
-            de forma remota, na Europa ou nos Estados Unidos.
+            Meu objetivo é atuar em times nacionais e um dia internacionais como desenvolvedor back-end.
           </p>
 
           <div className={styles.actions}>
