@@ -16,7 +16,7 @@ export const projects = [
   number: '02',
   title: 'Lista de Tarefas',
   description:
-    'Aplicação em Next.js 15 (App Router + TypeScript) para listagem e adição de tarefas. A página inicial roda como Server Component e busca os dados de forma assíncrona, enquanto o formulário de criação é um Client Component com validação própria. Cobertura de testes unitários e de integração com Jest e React Testing Library.',
+    'Aplicação em Next.js 15 (App Router + TypeScript) para gerenciar tarefas do dia a dia: cadastro, marcação de conclusão e remoção, com contador atualizado em tempo real. A página inicial roda como Server Component e busca os dados de forma assíncrona. Cobertura de testes unitários e de integração com Jest e React Testing Library.',
   tags: ['Next.js', 'TypeScript', 'Testes automatizados'],
   repoUrl: 'https://github.com/IgorSantosD3v/tarefas-app',
   },
