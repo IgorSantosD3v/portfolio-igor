@@ -8,7 +8,7 @@ const WHATSAPP_MESSAGE = 'Olá, Igor! Vi o seu portfólio e gostaria de conversa
 export const siteConfig = {
   name: 'Igor Santos',
   role: 'Desenvolvedor Back-End',
-  email: 'seuemail@exemplo.com', // TODO: troque pelo seu e-mail real antes de publicar
+  email: 'Igorsantosdevp@gmail.com', // TODO: troque pelo seu e-mail real antes de publicar
   githubUrl: 'https://github.com/IgorSantosD3v',
   githubHandle: '@IgorSantosD3v',
   linkedinUrl: 'https://www.linkedin.com/in/igor-santos-7b993b357',

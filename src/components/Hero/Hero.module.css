@@ -41,6 +41,10 @@
   color: var(--purple);
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .lead {
   font-size: 1.02rem;
   color: var(--color-ink-soft);

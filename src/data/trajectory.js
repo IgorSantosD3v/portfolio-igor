@@ -34,7 +34,7 @@ export const trajectory = [
   {
     year: '2026',
     title: 'Cloud & oportunidade internacional',
-    description: 'AWS, Azure e busca ativa por uma posição remota internacional.',
+    description: 'AWS, Azure e busca ativa por uma oportunidade nacional ou internacional.',
     current: true,
   },
 ]

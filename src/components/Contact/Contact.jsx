@@ -29,7 +29,6 @@ function Contact() {
           </span>
           <span className={styles.whatsappText}>
             <span className={styles.whatsappLabel}>Fale agora pelo WhatsApp</span>
-            <span className={styles.whatsappNumber}>{siteConfig.whatsappNumber}</span>
           </span>
           <span className={styles.whatsappArrow} aria-hidden="true">→</span>
         </a>

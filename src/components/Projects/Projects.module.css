@@ -57,20 +57,27 @@
 
 .cardLinks {
   display: flex;
-  gap: var(--space-3);
+  gap: var(--space-2);
 }
 
 .cardLink {
-  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.76rem;
   font-weight: 600;
   color: var(--purple);
-  border-bottom: 1px solid transparent;
-  transition: color 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
+  background: var(--purple-soft);
+  border: 1px solid var(--purple-soft-strong);
+  border-radius: var(--radius-pill);
+  padding: 0.4rem 0.85rem;
+  transition: color 0.2s var(--ease-out), background-color 0.2s var(--ease-out), border-color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
 }
 
 .cardLink:hover {
-  color: var(--purple-strong);
-  border-color: var(--purple-strong);
+  color: #ffffff;
+  background: var(--purple);
+  border-color: var(--purple);
+  transform: translateY(-2px);
 }
 
 .cardTitle {
