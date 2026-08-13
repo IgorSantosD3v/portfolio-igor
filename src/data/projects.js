@@ -12,13 +12,13 @@ export const projects = [
     repoUrl: 'https://github.com/IgorSantosD3v/pokemon-api',
   },
   {
-    id: 'micro-frontends-restaurante',
-    number: '02',
-    title: 'Micro-Frontends Restaurante',
-    description:
-      'Aplicação de cardápio digital construída com arquitetura de micro-frontends, separando domínios da interface em módulos independentes e combináveis.',
-    tags: ['React', 'Micro-Frontends', 'Arquitetura'],
-    repoUrl: 'https://github.com/IgorSantosD3v/micro-frontends-restaurante',
+  id: 'tarefas-app',
+  number: '02',
+  title: 'Lista de Tarefas',
+  description:
+    'Aplicação em Next.js 15 (App Router + TypeScript) para listagem e adição de tarefas. A página inicial roda como Server Component e busca os dados de forma assíncrona, enquanto o formulário de criação é um Client Component com validação própria. Cobertura de testes unitários e de integração com Jest e React Testing Library.',
+  tags: ['Next.js', 'TypeScript', 'Testes automatizados'],
+  repoUrl: 'https://github.com/IgorSantosD3v/tarefas-app',
   },
   {
     id: 'catalogo-produtos-performance',
