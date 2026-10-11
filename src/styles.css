@@ -38,3 +38,26 @@ body{background:#008080}
 .bsod{background:#00a;color:#fff;font:15px monospace;padding:24px;display:flex;align-items:center}
 .glitch{animation:gl .25s infinite}
 @keyframes gl{0%{filter:hue-rotate(0)}25%{filter:invert(1);transform:translate(4px,-2px)}50%{filter:hue-rotate(120deg)}75%{filter:invert(1) hue-rotate(200deg);transform:translate(-5px,3px)}}
+
+/* ===== fidelidade Windows 98 ===== */
+.ico,.startmenu,.taskbar,.tbb,.clock{font-family:"Pixelated MS Sans Serif",Arial,sans-serif;font-size:11px;-webkit-font-smoothing:none}
+.ico{width:76px;padding:3px 2px;line-height:1.15}
+.ico i{display:flex;justify-content:center;margin-bottom:3px}
+.ico span{display:inline-block;padding:0 2px;word-break:break-word}
+.ico:active span,.ico:focus span{background:#000080;outline:1px dotted #ff0}
+.taskbar{height:28px;padding:2px 2px;gap:2px;align-items:center;box-shadow:inset 0 1px #dfdfdf,inset 0 2px #fff}
+.taskbar button{height:22px;display:inline-flex;align-items:center;gap:4px;font-size:11px}
+.startbtn{font-weight:bold;padding:0 6px!important;margin-right:4px}
+.tbb{width:150px;justify-content:flex-start;text-align:left}
+.tbb.on{background:repeating-conic-gradient(#c0c0c0 0 25%,#fff 0 50%) 0 0/2px 2px}
+.clock{height:22px;display:flex;align-items:center;padding:0 12px!important;border:1px solid;border-color:#808080 #fff #fff #808080;box-shadow:none}
+.startmenu{left:2px;bottom:28px;width:200px;padding:2px;display:flex;font-size:12px}
+.smbar{width:24px;background:linear-gradient(#000080,#1084d0);color:#c0c0c0;writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;justify-content:flex-start;font:22px Arial;padding:6px 2px;white-space:nowrap}
+.smbar b{color:#fff;margin-top:2px;font-weight:bold}
+.smitems{flex:1}
+.startmenu .smitems div{display:flex;align-items:center;gap:8px;padding:4px 8px}
+.startmenu .off{width:24px;text-align:center;font-size:18px}
+.win-body{background:#c0c0c0}.win-body .notepad,.win-body .orkut{background:#fff}
+/* boot estilo splash */
+.spl{background:radial-gradient(ellipse at 20% 30%,#fff 0 8%,transparent 9%),radial-gradient(ellipse at 70% 25%,#fff 0 7%,transparent 8%),radial-gradient(ellipse at 45% 60%,#e6f0ff 0 9%,transparent 10%),linear-gradient(#4f9be0,#1856a8);border:2px solid #fff;border-radius:2px}
+.spl h1{font-size:46px;letter-spacing:-1px}

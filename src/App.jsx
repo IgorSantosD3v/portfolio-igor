@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { APPS } from './apps.jsx'
 import Virus from './Virus.jsx'
 import { chime } from './sound.js'
+import { Icon } from './icons.jsx'
 
 const ORDEM = ['sobre', 'projetos', 'ie', 'orkut', 'doom', 'contato', 'virus']
 const coarse = typeof matchMedia !== 'undefined' && matchMedia('(pointer:coarse)').matches
@@ -22,7 +23,7 @@ function Janela({ id, w, foco, onFoco, onFechar, onMin, children }) {
   return (
     <div className="window win" style={{ ...estilo, zIndex: foco }} onPointerDown={onFoco}>
       <div className="title-bar" onPointerDown={iniciar} onPointerMove={mover} onPointerUp={() => (drag.current = null)} onDoubleClick={() => setMax(!max)}>
-        <div className="title-bar-text">{app.icone} {app.titulo}</div>
+        <div className="title-bar-text"><Icon id={id} s={16} /> {app.titulo}</div>
         <div className="title-bar-controls">
           <button aria-label="Minimize" onClick={onMin} />
           <button aria-label={max ? 'Restore' : 'Maximize'} onClick={() => setMax(!max)} />
@@ -70,7 +71,7 @@ export default function App() {
       <div className="icons">
         {ORDEM.map((id) => (
           <div key={id} className="ico" {...{ [coarse ? 'onClick' : 'onDoubleClick']: () => (id === 'virus' ? abrir('virus') : abrir(id)) }}>
-            <i>{APPS[id].icone}</i><span>{APPS[id].rotulo}</span>
+            <i><Icon id={id} /></i><span>{APPS[id].rotulo}</span>
           </div>
         ))}
       </div>
@@ -90,17 +91,17 @@ export default function App() {
       })}
 
       {menu && (
-        <div className="window startmenu">
-          {['sobre', 'projetos', 'ie', 'orkut', 'doom', 'contato', 'virus'].map((id) => <div key={id} onClick={() => abrir(id)}>{APPS[id].icone} {APPS[id].rotulo}</div>)}
+        <div className="window startmenu"><div className="smbar"><b>Portfolio</b>98</div><div className="smitems">
+          {['sobre', 'projetos', 'ie', 'orkut', 'doom', 'contato', 'virus'].map((id) => <div key={id} onClick={() => abrir(id)}><Icon id={id} s={24} /><span>{APPS[id].rotulo}</span></div>)}
           <hr />
-          <div onClick={() => window.location.reload()}>🔌 Desligar...</div>
-        </div>
+          <div onClick={() => window.location.reload()}><span className="off">⏻</span><span>Desligar...</span></div>
+        </div></div>
       )}
 
       <div className="taskbar window">
-        <button className="startbtn" onClick={() => setMenu(!menu)}><b>🪟 Iniciar</b></button>
+        <button className="startbtn" onClick={() => setMenu(!menu)}><Icon id="win" s={16} /> <b>Iniciar</b></button>
         {wins.map((w) => (
-          <button key={w.id} className={`tbb ${w.z === topo && !w.min ? 'on' : ''}`} onClick={() => (w.min || w.z !== topo ? abrir(w.id) : min(w.id))}>{APPS[w.id].icone} {APPS[w.id].rotulo}</button>
+          <button key={w.id} className={`tbb ${w.z === topo && !w.min ? 'on' : ''}`} onClick={() => (w.min || w.z !== topo ? abrir(w.id) : min(w.id))}><Icon id={w.id} s={16} /> {APPS[w.id].rotulo}</button>
         ))}
         <span className="clock status-bar-field">{hora}</span>
       </div>
