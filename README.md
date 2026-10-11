@@ -19,5 +19,8 @@ Sem o arquivo, a janela mostra um aviso.
 Páginas internas (`igor://home`, `igor://projetos`, `igor://contato`) + web de verdade via Wayback Machine
 (1997/1999/2001/2005) ou web atual. Muitos sites atuais bloqueiam exibição em moldura; use o botão "Nova aba".
 
+## Som de inicialização
+O boot é automático (BIOS → splash). O som é `public/startup.mp3`; se o navegador bloquear o autoplay, toca no primeiro clique/tecla/toque.
+
 ## Sons e ícones
 A fanfarra de boot é original (sintetizada): a música e os ícones do Windows 98 são da Microsoft.

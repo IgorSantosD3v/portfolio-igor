@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { APPS } from './apps.jsx'
 import Virus from './Virus.jsx'
-import { chime } from './sound.js'
+import { tocarStartup } from './sound.js'
+import Bios from './Bios.jsx'
 import { Icon } from './icons.jsx'
 
 const ORDEM = ['sobre', 'projetos', 'ie', 'orkut', 'doom', 'contato', 'virus']
@@ -36,7 +37,7 @@ function Janela({ id, w, foco, onFoco, onFechar, onMin, children }) {
 }
 
 export default function App() {
-  const [fase, setFase] = useState('off') // off -> boot -> on
+  const [fase, setFase] = useState('bios') // bios -> boot -> on (automático)
   const [wins, setWins] = useState([]) // {id, z, min}
   const [menu, setMenu] = useState(false)
   const [virus, setVirus] = useState(false)
@@ -58,12 +59,13 @@ export default function App() {
   const min = (id) => setWins((w) => w.map((x) => (x.id === id ? { ...x, min: true } : x)))
   const topo = Math.max(0, ...wins.filter((x) => !x.min).map((x) => x.z))
 
-  const ligar = () => {
-    setFase('boot'); chime()
-    setTimeout(() => { setFase('on'); abrir('sobre') }, 3600)
-  }
+  useEffect(() => {
+    const t1 = setTimeout(() => { setFase('boot'); tocarStartup() }, 2800)
+    const t2 = setTimeout(() => { setFase('on'); abrir('sobre') }, 2800 + 6200)
+    return () => { clearTimeout(t1); clearTimeout(t2) }
+  }, [])
 
-  if (fase === 'off') return <div className="boot" onClick={ligar}><div className="big">🖥️</div><p>Windows 98 · Portfolio Edition<br /><br />[ clique para ligar o computador ]</p></div>
+  if (fase === 'bios') return <Bios />
   if (fase === 'boot') return <div className="boot"><div className="spl"><h1>Windows 98</h1><div>Portfolio Edition · {`Igor Santos`}</div><div className="pbar"><i /></div></div></div>
 
   return (

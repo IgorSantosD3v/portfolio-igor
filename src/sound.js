@@ -20,3 +20,14 @@ export function beep(f = 800, d = 0.1) {
     o.start(); o.stop(a.currentTime + d)
   } catch {}
 }
+
+// Som de inicialização (public/startup.mp3). Navegadores bloqueiam áudio antes de qualquer
+// interação; se o autoplay falhar, o som toca no primeiro clique/tecla/toque do visitante.
+export function tocarStartup() {
+  const a = new Audio('/startup.mp3')
+  a.volume = 0.85
+  a.onerror = chime
+  const ev = ['pointerdown', 'keydown', 'touchstart']
+  const go = () => { a.play().catch(() => {}); ev.forEach((e) => window.removeEventListener(e, go)) }
+  a.play().catch(() => ev.forEach((e) => window.addEventListener(e, go)))
+}
