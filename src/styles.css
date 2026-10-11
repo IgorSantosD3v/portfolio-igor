@@ -1,0 +1,40 @@
+*{box-sizing:border-box}
+html,body,#root{height:100%;margin:0;overflow:hidden;user-select:none}
+body{background:#008080}
+.desk{position:fixed;inset:0;background:#008080}
+.icons{position:absolute;inset:8px 8px 40px 8px;display:flex;flex-flow:column wrap;align-content:flex-start;gap:6px}
+.ico{width:78px;text-align:center;color:#fff;cursor:pointer;padding:2px;font-size:11px}
+.ico i{display:block;font-size:30px;font-style:normal}
+.ico:active span{background:#000080;outline:1px dotted #ff0}
+.win{position:absolute;display:flex;flex-direction:column}
+.win-body{flex:1;overflow:auto;margin:2px 0 0;padding:0;user-select:text}
+.title-bar{touch-action:none;cursor:default}
+.pad{padding:12px}
+.taskbar{position:fixed;left:0;right:0;bottom:0;height:30px;display:flex;gap:3px;padding:2px;z-index:99999;border-radius:0}
+.taskbar button{min-width:0;padding:0 8px}
+.tbb{max-width:130px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.tbb.on{font-weight:bold;box-shadow:inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px #808080}
+.clock{margin-left:auto;padding:4px 10px}
+.startmenu{position:fixed;left:2px;bottom:30px;width:190px;z-index:99999;padding:3px;font-size:12px}
+.startmenu div{padding:7px 10px;cursor:pointer}.startmenu div:hover{background:navy;color:#fff}.startmenu hr{margin:2px 0}
+.boot{position:fixed;inset:0;background:#000;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font:16px monospace;cursor:pointer;z-index:9}
+.boot .big{font-size:42px}
+.spl{width:min(520px,92vw);height:300px;background:linear-gradient(#1084d0,navy);display:flex;flex-direction:column;justify-content:center;gap:14px;align-items:center;font-family:Arial}
+.spl h1{font:italic bold 38px Arial;margin:0;text-shadow:3px 3px #000}
+.pbar{width:70%;height:16px;border:2px solid #fff;padding:1px}.pbar i{display:block;height:100%;width:0;background:repeating-linear-gradient(90deg,#fff 0 8px,transparent 8px 10px);animation:ld 3.2s linear forwards}
+@keyframes ld{to{width:100%}}
+.notepad{width:100%;height:100%;border:0;resize:none;font:13px 'Courier New',monospace;padding:6px;outline:0;background:#fff}
+.explorer{display:flex;height:100%}.plist{width:210px;margin:0;overflow:auto;border-right:1px solid gray}.plist li{cursor:pointer;padding:3px 4px}.plist li.sel{background:navy;color:#fff}.pinfo{flex:1;padding:10px;overflow:auto}
+.ie{display:flex;flex-direction:column;height:100%}.ie-bar{display:flex;gap:4px;padding:3px;align-items:center}.ie-bar input{flex:1;min-width:0}.ie-page{flex:1;width:100%;border:2px inset #fff;background:#fff}
+.doomwrap{width:100%;height:100%;background:#000}
+.orkut{font:12px Arial,sans-serif;background:#f4efff;color:#333;min-height:100%}
+.ok-hd{background:linear-gradient(#e94b9a,#c0287a);padding:6px 10px;color:#fff;font:bold 22px Arial;letter-spacing:-1px}.ok-hd small{font:11px Arial;float:right;margin-top:8px}
+.ok-cols{display:flex;gap:8px;padding:8px;flex-wrap:wrap}.ok-c1{flex:0 0 190px}.ok-c2{flex:1;min-width:230px}
+.ok-card{background:#fff;border:1px solid #d9b3ea;border-radius:6px;padding:8px;margin-bottom:8px}.ok-card h3{margin:0 0 6px;color:#c0287a;font-size:13px}
+.ok-av{font-size:70px;text-align:center}.ok-card p{margin:5px 0}
+.vir{position:fixed;inset:0;z-index:999999;background:rgba(0,0,0,.55);overflow:hidden}
+.vlog{margin:0;padding:8px;color:#0f0;background:rgba(0,0,0,.75);font:12px monospace;white-space:pre-wrap}
+.pop{position:absolute;width:230px}
+.bsod{background:#00a;color:#fff;font:15px monospace;padding:24px;display:flex;align-items:center}
+.glitch{animation:gl .25s infinite}
+@keyframes gl{0%{filter:hue-rotate(0)}25%{filter:invert(1);transform:translate(4px,-2px)}50%{filter:hue-rotate(120deg)}75%{filter:invert(1) hue-rotate(200deg);transform:translate(-5px,3px)}}
